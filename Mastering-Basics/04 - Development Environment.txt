@@ -1,0 +1,62 @@
+O'reilly Online Training
+Mastering Relational SQL Querying
+Development Environment Setup
+-------------------------------------------
+
+Go to http://sqlitebrowser.org/
+Download and install the version for your O/S
+* Installation instructions on home page
+
+Launch DB Browser for SQLite.
+Click 'New Database'.
+Select a folder and name for your database file.
+* Note - This example will be a tiny file, don't worry about space considerations
+
+The client will launch the CREATE TABLE wizard automatically.
+Type 'MyFirstTable' in the name text box.
+
+Click 'Add Field'.
+* Note - in most RDBMS the term is a 'column'. However, since SQLite does not enforce domain integrity, it is unfortunately a 'field', like in a spreadsheet
+Type 'KeyColumn' in the field name text box.
+Leave the domain data type at the default type 'INTEGER'.
+Check the 'Not NULL' and 'Primary Key' check boxes.
+
+Click 'Add Field'.
+Type 'AttributeColumn' in the field name text box.
+Change the domain data type to 'TEXT'.
+Check the 'Not NULL' check box.
+
+Examine the SQL statement that was automatically generated for you by the wizard.
+Click 'OK'
+
+Click the 'Browse Data' tab, the table is still empty of course.
+Click 'New Record'
+* Note that the term 'Record' is wrong. In a relational database, the term is a 'Row'.
+Enter the values '1' and 'A' for both Columns respectively and click 'New Record'.
+* NOTE - you must press 'Enter' after inserting a value for each cell.
+* NOTE - Do not type the values in the filter field, use the empty text boxes right below it.
+Enter the values '2' and 'B' for both Columns respectively and press 'Enter'.
+
+Explore the various tabs that the tool offers.
+
+Click 'Write Changes' 
+* Note - Your changes are not committed to the database file until you click 'Write Changes'.
+
+Click 'File -> Close Database' (or CTRL+W).
+
+Click 'File' and select your database from the list of 3 recently used files (or CTRL+1).
+Click the 'Browse Data' tab and make sure your table values are still there.
+
+Congratulations! 
+You successfully created your first database!
+
+Additional Links:
+
+https://dev.mysql.com/downloads/
+https://www.postgresql.org/download/
+https://www.microsoft.com/en-us/sql-server/sql-server-editions-express
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+https://docs.microsoft.com/en-us/sql/sql-operations-studio/download
+http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
+http://www.sqlfiddle.com/
+https://dbfiddle.uk/
