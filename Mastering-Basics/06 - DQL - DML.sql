@@ -4,6 +4,16 @@
 --------------------------------------
 
 -- Open the database created in the previous exercise 'set up the development environment'
+-- Or use this script to create MyFirstTable
+
+CREATE TABLE MyFirstTable
+(
+KeyColumn INT PRIMARY KEY,
+AttributeColumn VARCHAR(10) NOT NULL
+);
+
+INSERT INTO MyFirstTable (KeyColumn,AttributeColumn)
+VALUES (1,'A'), (2, 'C');
 
 -- DQL
 SELECT 	*
