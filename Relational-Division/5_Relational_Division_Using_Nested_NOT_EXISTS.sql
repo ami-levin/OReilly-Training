@@ -6,7 +6,6 @@
 -- https://1drv.ms/u/s!ArtNt2j9rxvUyApISeBka9eGwWil
 
 -- What skills are common to all jobs?
--- Divisor = All Jobs, Dividend - Job Skills
 
 SELECT	S.Skill
 FROM	Skills AS S
@@ -23,7 +22,6 @@ WHERE	NOT EXISTS	(
 					);
 
 -- Which candidate has all professional skills?
--- Divisor = Professional Skills, Dividend = Candidate Skills
 
 WITH ProfessionalSkills 
 AS
