@@ -9,7 +9,6 @@ USE HR;
 GO
 
 -- Candidates that have all skills 
--- (Divisor = Skills, Dividend = Candidate Skills)
 
 SELECT	C.Candidate
 FROM	Candidates AS C
@@ -24,7 +23,6 @@ WHERE	NOT EXISTS	(
 
 
 -- Candidates that fit the DB Architect job
--- (Divisor = DB Architect Skills, Dividend = Candidates)
 
 SELECT	C.Candidate
 FROM	Candidates AS C
