@@ -9,7 +9,6 @@ USE HR;
 GO
 
 -- Show all candidates that fit the DB Architect role 
--- (Divisor = DB Architect Skills, Dividend = Candidate Skills)
 
 WITH DBArchitectSkills 
 AS
