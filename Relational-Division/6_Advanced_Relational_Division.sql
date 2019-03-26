@@ -8,7 +8,6 @@
 -- Todd's Division
 
 -- Show all candidate and jobs, where the candidate meets the job requirements 
--- (Divisor = (multiple sets of) Job Skills, Dividend = Candidate Skills)
 
 -- Using SET operator
 SELECT	DISTINCT	C.Candidate, 
