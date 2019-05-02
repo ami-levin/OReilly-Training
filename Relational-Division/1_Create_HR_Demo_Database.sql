@@ -25,51 +25,61 @@ USE HR;
 GO
 
 CREATE TABLE Candidates (
-						Candidate 
-							VARCHAR(30) NOT NULL 
-							PRIMARY KEY
-						);
+				Candidate 
+					VARCHAR(30) NOT NULL 
+					PRIMARY KEY
+			);
 
 CREATE TABLE Jobs	(
-					Job 
-						VARCHAR(30) NOT NULL
-						PRIMARY KEY
-					);
+				Job 
+					VARCHAR(30) NOT NULL
+					PRIMARY KEY
+			);
 
 CREATE TABLE SkillCategories	(
-								Category
-									VARCHAR(30) NOT NULL
-									PRIMARY KEY
-								);
-
-CREATE TABLE Skills	(
-					Skill
-						VARCHAR(30) NOT NULL
-						PRIMARY KEY,
 					Category
 						VARCHAR(30) NOT NULL
-						REFERENCES SkillCategories(Category)
-					);
+						PRIMARY KEY
+				);
+
+CREATE TABLE Skills	(
+				Skill
+					VARCHAR(30) NOT NULL
+					PRIMARY KEY,
+				Category
+					VARCHAR(30) NOT NULL
+					REFERENCES SkillCategories(Category)
+					ON DELETE NO ACTION
+					ON UPDATE CASCADE
+			);
 
 CREATE TABLE CandidateSkills	(
-								Candidate
-									VARCHAR(30) NOT NULL
-									REFERENCES Candidates(Candidate),
-								Skill
-									VARCHAR(30) NOT NULL
-									REFERENCES Skills(Skill),
-								PRIMARY KEY (Candidate, Skill)
-								);
+					Candidate
+						VARCHAR(30) NOT NULL
+						REFERENCES Candidates(Candidate)
+						ON DELETE NO ACTION
+						ON UPDATE CASCADE,
+					Skill
+						VARCHAR(30) NOT NULL
+						REFERENCES Skills(Skill)
+						ON DELETE NO ACTION
+						ON UPDATE CASCADE,
+					PRIMARY KEY (Candidate, Skill)
+				);
 
 CREATE TABLE JobSkills	(
-						Job
-							VARCHAR(30) NOT NULL
-							REFERENCES Jobs(Job),
-						Skill
-							VARCHAR(30) NOT NULL
-							REFERENCES Skills(Skill),
-						PRIMARY KEY (Job, Skill)
-						);
+				Job
+					VARCHAR(30) NOT NULL
+					REFERENCES Jobs(Job)
+					ON DELETE NO ACTION
+					ON UPDATE CASCADE,
+				Skill
+					VARCHAR(30) NOT NULL
+					REFERENCES Skills(Skill)
+					ON DELETE NO ACTION
+					ON UPDATE CASCADE,
+				PRIMARY KEY (Job, Skill)
+			);
 
 INSERT INTO Candidates(Candidate)
 VALUES ('Ami'),('Xi'),('DJ'),('Steve'), ('Darrin');
