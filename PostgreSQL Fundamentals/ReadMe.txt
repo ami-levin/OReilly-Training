@@ -1,1 +1,6 @@
-Placeholder
+-------------------------------------
+-- O'reilly Online Training ---------
+-- PostgreSQL fundamentals ----------
+-------------------------------------
+-- https://github.com/ami-levin/OReilly-Training/tree/master/PostgreSQL%20Fundamentals
+--------------------------------------------------------------------------------------
